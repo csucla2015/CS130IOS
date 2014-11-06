@@ -24,4 +24,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)creatorButton:(UIButton *)sender {
+}
+
+- (IBAction)contributorButton:(UIButton *)sender {
+}
 @end

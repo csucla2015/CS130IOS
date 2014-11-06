@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *titleOutlet;
+
+- (IBAction)creatorButton:(UIButton *)sender;
+- (IBAction)contributorButton:(UIButton *)sender;
 
 @end
 

@@ -14,6 +14,7 @@
 		ACA851521A0361DC00F6AC59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA851511A0361DC00F6AC59 /* Images.xcassets */; };
 		ACA851551A0361DC00F6AC59 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACA851531A0361DC00F6AC59 /* LaunchScreen.xib */; };
 		ACA851611A0361DC00F6AC59 /* Community_PlaylistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA851601A0361DC00F6AC59 /* Community_PlaylistTests.m */; };
+		ACF497191A0B5E3100CF11AA /* CreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF497181A0B5E3100CF11AA /* CreatorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		ACA8515A1A0361DC00F6AC59 /* Community PlaylistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Community PlaylistTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA8515F1A0361DC00F6AC59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACA851601A0361DC00F6AC59 /* Community_PlaylistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Community_PlaylistTests.m; sourceTree = "<group>"; };
+		ACF497171A0B5E3100CF11AA /* CreatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreatorViewController.h; path = ../CreatorViewController.h; sourceTree = "<group>"; };
+		ACF497181A0B5E3100CF11AA /* CreatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreatorViewController.m; path = ../CreatorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				ACA851491A0361DB00F6AC59 /* AppDelegate.m */,
 				ACA8514B1A0361DB00F6AC59 /* ViewController.h */,
 				ACA8514C1A0361DB00F6AC59 /* ViewController.m */,
+				ACF497171A0B5E3100CF11AA /* CreatorViewController.h */,
+				ACF497181A0B5E3100CF11AA /* CreatorViewController.m */,
 				ACA8514E1A0361DB00F6AC59 /* Main.storyboard */,
 				ACA851511A0361DC00F6AC59 /* Images.xcassets */,
 				ACA851531A0361DC00F6AC59 /* LaunchScreen.xib */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACA8514D1A0361DB00F6AC59 /* ViewController.m in Sources */,
+				ACF497191A0B5E3100CF11AA /* CreatorViewController.m in Sources */,
 				ACA8514A1A0361DB00F6AC59 /* AppDelegate.m in Sources */,
 				ACA851471A0361DB00F6AC59 /* main.m in Sources */,
 			);
@@ -414,6 +420,7 @@
 				ACA851661A0361DC00F6AC59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACA851671A0361DC00F6AC59 /* Build configuration list for PBXNativeTarget "Community PlaylistTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +429,7 @@
 				ACA851691A0361DC00F6AC59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
