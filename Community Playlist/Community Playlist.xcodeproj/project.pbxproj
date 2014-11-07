@@ -15,6 +15,7 @@
 		ACA851551A0361DC00F6AC59 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACA851531A0361DC00F6AC59 /* LaunchScreen.xib */; };
 		ACA851611A0361DC00F6AC59 /* Community_PlaylistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA851601A0361DC00F6AC59 /* Community_PlaylistTests.m */; };
 		ACF497191A0B5E3100CF11AA /* CreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF497181A0B5E3100CF11AA /* CreatorViewController.m */; };
+		ACFA47DD1A0C22EE0047B630 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFA47DC1A0C22EE0047B630 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		ACA851601A0361DC00F6AC59 /* Community_PlaylistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Community_PlaylistTests.m; sourceTree = "<group>"; };
 		ACF497171A0B5E3100CF11AA /* CreatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreatorViewController.h; path = ../CreatorViewController.h; sourceTree = "<group>"; };
 		ACF497181A0B5E3100CF11AA /* CreatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreatorViewController.m; path = ../CreatorViewController.m; sourceTree = "<group>"; };
+		ACFA47DC1A0C22EE0047B630 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACA298DD1A0C205E007058F1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ACFA47DC1A0C22EE0047B630 /* logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		ACA851381A0361DB00F6AC59 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 				ACA8514E1A0361DB00F6AC59 /* Main.storyboard */,
 				ACA851511A0361DC00F6AC59 /* Images.xcassets */,
 				ACA851531A0361DC00F6AC59 /* LaunchScreen.xib */,
+				ACA298DD1A0C205E007058F1 /* Images */,
 				ACA851441A0361DB00F6AC59 /* Supporting Files */,
 			);
 			path = "Community Playlist";
@@ -173,6 +184,7 @@
 				TargetAttributes = {
 					ACA851401A0361DB00F6AC59 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = PR48US84NH;
 					};
 					ACA851591A0361DC00F6AC59 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -204,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFA47DD1A0C22EE0047B630 /* logo.png in Resources */,
 				ACA851501A0361DB00F6AC59 /* Main.storyboard in Resources */,
 				ACA851551A0361DC00F6AC59 /* LaunchScreen.xib in Resources */,
 				ACA851521A0361DC00F6AC59 /* Images.xcassets in Resources */,
@@ -350,9 +363,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Community Playlist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -361,9 +376,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Community Playlist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
