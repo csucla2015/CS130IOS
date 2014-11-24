@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Rdio/Rdio.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
++ (Rdio *)rdioInstance;
+
 @property (strong, nonatomic) UIWindow *window;
+
+@property (readonly) Rdio *rdio;
 
 
 @end

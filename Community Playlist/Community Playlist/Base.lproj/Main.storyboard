@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8p5-wT-XRd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8p5-wT-XRd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -184,11 +184,99 @@
                             <constraint firstItem="PX7-qn-Zpe" firstAttribute="centerY" secondItem="flW-Fc-ICw" secondAttribute="centerY" id="odp-g7-ovG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title=" Number" id="apG-aS-i81"/>
+                    <navigationItem key="navigationItem" title=" Number" id="apG-aS-i81">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="QUr-VT-JOg">
+                            <connections>
+                                <segue destination="3Tn-zZ-nVn" kind="show" id="sy3-ba-KxG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNL-9m-w4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1625" y="322"/>
+        </scene>
+        <!--Player-->
+        <scene sceneID="AfP-K7-KN3">
+            <objects>
+                <viewController id="3Tn-zZ-nVn" customClass="PlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="01y-ni-m4B"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y5c-VX-kN4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2dD-h1-Jly">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dge-lB-wJ4">
+                                <rect key="frame" x="179" y="143" width="31" height="30"/>
+                                <state key="normal" title="Prev">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevButtonPressed:" destination="3Tn-zZ-nVn" eventType="touchUpInside" id="Uy2-tc-NTP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMF-og-9za">
+                                <rect key="frame" x="285" y="143" width="30" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="3Tn-zZ-nVn" eventType="touchUpInside" id="wjD-aT-181"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHD-VP-Ug6">
+                                <rect key="frame" x="392" y="143" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="3Tn-zZ-nVn" eventType="touchUpInside" id="w0N-YC-kzL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JI-MP-8R2">
+                                <rect key="frame" x="254" y="300" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIw-du-bgx">
+                                <rect key="frame" x="280" y="346" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2666666667" green="0.42352941179999998" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EHD-VP-Ug6" firstAttribute="baseline" secondItem="iMF-og-9za" secondAttribute="baseline" id="2Qi-NP-uMw"/>
+                            <constraint firstItem="iMF-og-9za" firstAttribute="baseline" secondItem="Dge-lB-wJ4" secondAttribute="baseline" id="8YG-YA-CUw"/>
+                            <constraint firstItem="EHD-VP-Ug6" firstAttribute="leading" secondItem="iMF-og-9za" secondAttribute="trailing" constant="77" id="9pD-DM-CFi"/>
+                            <constraint firstItem="DIw-du-bgx" firstAttribute="centerX" secondItem="4JI-MP-8R2" secondAttribute="centerX" id="DET-w0-Z9v"/>
+                            <constraint firstItem="iMF-og-9za" firstAttribute="centerX" secondItem="4JI-MP-8R2" secondAttribute="centerX" id="Wl0-bz-jDy"/>
+                            <constraint firstItem="4JI-MP-8R2" firstAttribute="centerX" secondItem="2dD-h1-Jly" secondAttribute="centerX" id="YA7-m4-EqN"/>
+                            <constraint firstItem="iMF-og-9za" firstAttribute="leading" secondItem="Dge-lB-wJ4" secondAttribute="trailing" constant="75" id="ezD-L9-DXm"/>
+                            <constraint firstItem="DIw-du-bgx" firstAttribute="top" secondItem="4JI-MP-8R2" secondAttribute="bottom" constant="25" id="iKL-Wd-hW8"/>
+                            <constraint firstItem="Y5c-VX-kN4" firstAttribute="top" secondItem="DIw-du-bgx" secondAttribute="bottom" constant="233" id="jJq-6U-Ruo"/>
+                            <constraint firstItem="Dge-lB-wJ4" firstAttribute="top" secondItem="01y-ni-m4B" secondAttribute="bottom" constant="79" id="qW9-as-yGQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Player" id="4K3-zx-4FO"/>
+                    <connections>
+                        <outlet property="currentArtistLabel" destination="DIw-du-bgx" id="LD7-Wh-gei"/>
+                        <outlet property="currentTrackLabel" destination="4JI-MP-8R2" id="ceb-66-z8D"/>
+                        <outlet property="nextButton" destination="EHD-VP-Ug6" id="r0g-ma-MtT"/>
+                        <outlet property="playButton" destination="iMF-og-9za" id="2Y0-gh-znW"/>
+                        <outlet property="prevButton" destination="Dge-lB-wJ4" id="TFK-nl-ah4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mzg-ax-8yN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2396" y="322"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC5A72381A22786500AB4F3F /* Rdio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A72371A22786500AB4F3F /* Rdio.framework */; };
+		AC5A723B1A2278E200AB4F3F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A723A1A2278E200AB4F3F /* AudioToolbox.framework */; };
+		AC5A723D1A2278E900AB4F3F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A723C1A2278E900AB4F3F /* CFNetwork.framework */; };
+		AC5A723F1A2278F200AB4F3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A723E1A2278F200AB4F3F /* CoreGraphics.framework */; };
+		AC5A72411A2278FA00AB4F3F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A72401A2278FA00AB4F3F /* CoreMedia.framework */; };
+		AC5A72431A22790300AB4F3F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A72421A22790300AB4F3F /* Security.framework */; };
+		AC5A72451A22790E00AB4F3F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A72441A22790E00AB4F3F /* SystemConfiguration.framework */; };
+		AC5A724C1A22827600AB4F3F /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5A724B1A22827600AB4F3F /* PlayerViewController.m */; };
+		AC5A724E1A228DFF00AB4F3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A724D1A228DFF00AB4F3F /* Foundation.framework */; };
 		ACA851471A0361DB00F6AC59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA851461A0361DB00F6AC59 /* main.m */; };
 		ACA8514A1A0361DB00F6AC59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA851491A0361DB00F6AC59 /* AppDelegate.m */; };
 		ACA8514D1A0361DB00F6AC59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA8514C1A0361DB00F6AC59 /* ViewController.m */; };
@@ -29,6 +38,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC5A72371A22786500AB4F3F /* Rdio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rdio.framework; path = Frameworks/Rdio.framework; sourceTree = "<group>"; };
+		AC5A723A1A2278E200AB4F3F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AC5A723C1A2278E900AB4F3F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AC5A723E1A2278F200AB4F3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AC5A72401A2278FA00AB4F3F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		AC5A72421A22790300AB4F3F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AC5A72441A22790E00AB4F3F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AC5A72461A227E4A00AB4F3F /* ConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumerCredentials.h; sourceTree = "<group>"; };
+		AC5A724A1A22827600AB4F3F /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		AC5A724B1A22827600AB4F3F /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		AC5A724D1A228DFF00AB4F3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ACA851411A0361DB00F6AC59 /* Community Playlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Community Playlist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA851451A0361DB00F6AC59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACA851461A0361DB00F6AC59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,6 +72,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5A724E1A228DFF00AB4F3F /* Foundation.framework in Frameworks */,
+				AC5A72451A22790E00AB4F3F /* SystemConfiguration.framework in Frameworks */,
+				AC5A72431A22790300AB4F3F /* Security.framework in Frameworks */,
+				AC5A72411A2278FA00AB4F3F /* CoreMedia.framework in Frameworks */,
+				AC5A723F1A2278F200AB4F3F /* CoreGraphics.framework in Frameworks */,
+				AC5A723D1A2278E900AB4F3F /* CFNetwork.framework in Frameworks */,
+				AC5A723B1A2278E200AB4F3F /* AudioToolbox.framework in Frameworks */,
+				AC5A72381A22786500AB4F3F /* Rdio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +93,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC5A72391A22787000AB4F3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC5A724D1A228DFF00AB4F3F /* Foundation.framework */,
+				AC5A72441A22790E00AB4F3F /* SystemConfiguration.framework */,
+				AC5A72421A22790300AB4F3F /* Security.framework */,
+				AC5A72401A2278FA00AB4F3F /* CoreMedia.framework */,
+				AC5A723E1A2278F200AB4F3F /* CoreGraphics.framework */,
+				AC5A723C1A2278E900AB4F3F /* CFNetwork.framework */,
+				AC5A723A1A2278E200AB4F3F /* AudioToolbox.framework */,
+				AC5A72371A22786500AB4F3F /* Rdio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ACA298DD1A0C205E007058F1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +122,7 @@
 				ACA851431A0361DB00F6AC59 /* Community Playlist */,
 				ACA8515D1A0361DC00F6AC59 /* Community PlaylistTests */,
 				ACA851421A0361DB00F6AC59 /* Products */,
+				AC5A72391A22787000AB4F3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,11 +140,14 @@
 			children = (
 				ACA851481A0361DB00F6AC59 /* AppDelegate.h */,
 				ACA851491A0361DB00F6AC59 /* AppDelegate.m */,
+				AC5A72461A227E4A00AB4F3F /* ConsumerCredentials.h */,
 				ACA8514B1A0361DB00F6AC59 /* ViewController.h */,
 				ACA8514C1A0361DB00F6AC59 /* ViewController.m */,
 				ACF497171A0B5E3100CF11AA /* CreatorViewController.h */,
 				ACF497181A0B5E3100CF11AA /* CreatorViewController.m */,
 				ACA8514E1A0361DB00F6AC59 /* Main.storyboard */,
+				AC5A724A1A22827600AB4F3F /* PlayerViewController.h */,
+				AC5A724B1A22827600AB4F3F /* PlayerViewController.m */,
 				ACA851511A0361DC00F6AC59 /* Images.xcassets */,
 				ACA851531A0361DC00F6AC59 /* LaunchScreen.xib */,
 				ACA298DD1A0C205E007058F1 /* Images */,
@@ -241,6 +288,7 @@
 				ACF497191A0B5E3100CF11AA /* CreatorViewController.m in Sources */,
 				ACA8514A1A0361DB00F6AC59 /* AppDelegate.m in Sources */,
 				ACA851471A0361DB00F6AC59 /* main.m in Sources */,
+				AC5A724C1A22827600AB4F3F /* PlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,8 +412,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "Community Playlist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -377,8 +430,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "Community Playlist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

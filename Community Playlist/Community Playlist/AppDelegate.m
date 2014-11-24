@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ConsumerCredentials.h"
+
+static AppDelegate *launchedDelegate;
 
 @interface AppDelegate ()
 
@@ -14,9 +17,15 @@
 
 @implementation AppDelegate
 
++ (Rdio *)rdioInstance
+{
+    return launchedDelegate.rdio;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    launchedDelegate = self;
     
     // Let the device know we want to receive push notifications
     #ifdef __IPHONE_8_0
@@ -30,6 +39,10 @@
     UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
     #endif
+    
+    _rdio = [[Rdio alloc] initWithConsumerKey:CONSUMER_KEY andSecret:CONSUMER_SECRET delegate:nil];
+    [self.rdio preparePlayerWithDelegate:nil];
+    [self.rdio.player playSource:@"t1"];
     
     return YES;
 }
