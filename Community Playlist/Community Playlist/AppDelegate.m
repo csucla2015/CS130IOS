@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ConsumerCredentials.h"
+#import "RdioCredentials.h"
 
 static AppDelegate *launchedDelegate;
 

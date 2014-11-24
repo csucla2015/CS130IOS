@@ -45,10 +45,10 @@
 		AC5A72401A2278FA00AB4F3F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		AC5A72421A22790300AB4F3F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AC5A72441A22790E00AB4F3F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		AC5A72461A227E4A00AB4F3F /* ConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumerCredentials.h; sourceTree = "<group>"; };
 		AC5A724A1A22827600AB4F3F /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		AC5A724B1A22827600AB4F3F /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		AC5A724D1A228DFF00AB4F3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AC5A72951A22E55F00AB4F3F /* RdioCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RdioCredentials.h; sourceTree = "<group>"; };
 		ACA851411A0361DB00F6AC59 /* Community Playlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Community Playlist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA851451A0361DB00F6AC59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACA851461A0361DB00F6AC59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -140,12 +140,12 @@
 			children = (
 				ACA851481A0361DB00F6AC59 /* AppDelegate.h */,
 				ACA851491A0361DB00F6AC59 /* AppDelegate.m */,
-				AC5A72461A227E4A00AB4F3F /* ConsumerCredentials.h */,
 				ACA8514B1A0361DB00F6AC59 /* ViewController.h */,
 				ACA8514C1A0361DB00F6AC59 /* ViewController.m */,
 				ACF497171A0B5E3100CF11AA /* CreatorViewController.h */,
 				ACF497181A0B5E3100CF11AA /* CreatorViewController.m */,
 				ACA8514E1A0361DB00F6AC59 /* Main.storyboard */,
+				AC5A72951A22E55F00AB4F3F /* RdioCredentials.h */,
 				AC5A724A1A22827600AB4F3F /* PlayerViewController.h */,
 				AC5A724B1A22827600AB4F3F /* PlayerViewController.m */,
 				ACA851511A0361DC00F6AC59 /* Images.xcassets */,
