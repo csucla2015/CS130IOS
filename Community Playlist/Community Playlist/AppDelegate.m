@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RdioCredentials.h"
+#import "TrackInfo.h"
 
 static AppDelegate *launchedDelegate;
 
@@ -22,10 +23,34 @@ static AppDelegate *launchedDelegate;
     return launchedDelegate.rdio;
 }
 
++ (NSMutableArray *)trackKeysInstance
+{
+    return launchedDelegate.trackKeys;
+}
+
++ (NSMutableArray *)trackNamesInstance
+{
+    return launchedDelegate.trackNames;
+}
+
++ (NSMutableArray *)tracksInfoInstance
+{
+    return launchedDelegate.tracksInfo;
+}
+
+@synthesize trackKeys;
+@synthesize trackNames;
+@synthesize tracksInfo;
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     launchedDelegate = self;
+    self.trackKeys = [[NSMutableArray alloc] init];
+    self.trackNames = [[NSMutableArray alloc] init];
+    self.tracksInfo = [[NSMutableArray alloc] init];
+    
     
     // Let the device know we want to receive push notifications
     #ifdef __IPHONE_8_0
@@ -35,14 +60,13 @@ static AppDelegate *launchedDelegate;
                                                                                          |UIUserNotificationTypeAlert) categories:nil];
     [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     #else
-    //register to receive notifications
+    // Register to receive notifications
     UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
     #endif
     
     _rdio = [[Rdio alloc] initWithConsumerKey:CONSUMER_KEY andSecret:CONSUMER_SECRET delegate:nil];
     [self.rdio preparePlayerWithDelegate:nil];
-    [self.rdio.player playSource:@"t1"];
     
     return YES;
 }
@@ -63,21 +87,57 @@ static AppDelegate *launchedDelegate;
 #endif
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    UIApplicationState state = [application applicationState];
-    if (state == UIApplicationStateActive) {
-        NSString *cancelTitle = @"Close";
-        NSString *showTitle = @"Show";
-        NSString *message = [[userInfo valueForKey:@"aps"] valueForKey:@"alert"];
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Song Added"
-                                                            message:message
-                                                           delegate:self
-                                                  cancelButtonTitle:cancelTitle
-                                                  otherButtonTitles:showTitle, nil];
-        [alertView show];
-        //[alertView release];
-    } else {
-        //Do stuff that you would do if the application was not active
-    }
+    NSString *message = [[userInfo valueForKey:@"aps"] valueForKey:@"alert"];
+    
+    RDAPIRequestDelegate *trackDelegate = [RDAPIRequestDelegate delegateToTarget:self
+                                                                    loadedAction:@selector(updateCurrentTrackRequest:didLoadData:)
+                                                                    failedAction:@selector(updateCurrentTrackRequest:didFail:)];
+    [[AppDelegate rdioInstance] callAPIMethod:@"search"
+                               withParameters:@{@"query": message, @"types":@"track", @"extras":@"-*,key,name,artist,icon", @"count":@"1"}
+                                     delegate:trackDelegate];
+}
+
+- (void)updateCurrentTrackRequest:(RDAPIRequest *)request didLoadData:(NSDictionary *)data
+{
+    TrackInfo *trackInfo = [[TrackInfo alloc] init];
+    
+    NSArray *metadata = [data objectForKey:@"results"];
+    NSString *trackKey = [[metadata objectAtIndex:0] objectForKey:@"key"];
+    NSLog(@"Track key found: %@", trackKey);
+    trackInfo.trackKey = trackKey;
+    NSLog(@"Track keys: %@", trackKeys);
+    
+    NSString *trackName = [[metadata objectAtIndex:0] objectForKey:@"name"];
+    NSString *trackArtist = [[metadata objectAtIndex:0] objectForKey:@"artist"];
+    NSMutableString *message = [trackName mutableCopy];
+    [message appendString:@" by "];
+    [message appendString:trackArtist];
+    trackInfo.trackName = message;
+    
+    NSString *trackImageUrl = [[metadata objectAtIndex:0] objectForKey:@"icon"];
+    trackInfo.trackImageUrl = trackImageUrl;
+    
+    NSString *cancelTitle = @"Cool";
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Song Added"
+                                                        message:message
+                                                       delegate:self
+                                              cancelButtonTitle:cancelTitle
+                                              otherButtonTitles:nil];
+    [alertView show];
+    
+    [tracksInfo addObject:trackInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTheTrackKeysArray" object:nil];
+
+    
+}
+
+- (void)updateCurrentTrackRequest:(RDAPIRequest *)request didFail:(NSError *)error
+{
+    NSLog(@"error: %@", error);
+}
+
+- (void)application:(UIApplication *)application notifyUserThatSongWasAdded:(NSString *)message {
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -109,7 +169,6 @@ static AppDelegate *launchedDelegate;
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"Did Fail to Register for Remote Notifications");
     NSLog(@"%@, %@", error, error.localizedDescription);
-    
 }
 
 @end

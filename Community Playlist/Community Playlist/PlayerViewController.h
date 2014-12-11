@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Rdio/Rdio.h"
 
-@interface PlayerViewController : UIViewController<RdioDelegate,RDPlayerDelegate>
+@interface PlayerViewController : UIViewController<RdioDelegate,RDPlayerDelegate,UITableViewDelegate, UITableViewDataSource>
 
 @property (readonly, nonatomic, weak) RDPlayer *player;
 
@@ -20,8 +20,16 @@
 @property (strong, nonatomic) IBOutlet UILabel *currentTrackLabel;
 @property (strong, nonatomic) IBOutlet UILabel *currentArtistLabel;
 
+@property (strong, nonatomic) IBOutlet UIImageView *trackImage;
+@property (strong, nonatomic) IBOutlet UIImageView *trackIcon;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableOfUpcomingTracks;
+
+@property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
 
 - (IBAction)playButtonPressed:(id)sender;
 - (IBAction)prevButtonPressed:(id)sender;
 - (IBAction)nextButtonPressed:(id)sender;
+- (IBAction)sharePressed:(id)sender;
+
 @end

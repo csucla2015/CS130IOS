@@ -12,11 +12,15 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 + (Rdio *)rdioInstance;
++ (NSMutableArray *)trackKeysInstance;
++ (NSMutableArray *)trackNamesInstance;
++ (NSMutableArray *)tracksInfoInstance;
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic, retain) NSMutableArray *trackKeys;
+@property (nonatomic, retain) NSMutableArray *trackNames;
+@property (nonatomic, retain) NSMutableArray *tracksInfo;
 @property (readonly) Rdio *rdio;
-
 
 @end
 
